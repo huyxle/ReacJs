@@ -36,7 +36,6 @@ export const getStore = () => {
         defaultState,
         enhancer
     );
-    console.log("huy");
     initSagas(sagaMiddleware);
     return store;
 };

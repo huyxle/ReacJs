@@ -5,6 +5,7 @@ import {
 } from '../actions'
 export const currentUser = createReducer(null, {
     [SET_CURRENT_USER](state,{user}) {
+        console.info(user);
         return fromJS(user);
     }
 });
