@@ -9,7 +9,6 @@ export const UserInfoDisplay = ({name,address1,country,phone,fetched})=>(
                 {address1}, {country}
                 <br/>
                 {phone}
-                {console.info('render')}
             </p>
             : <div>
                 <p>
