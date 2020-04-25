@@ -5,7 +5,7 @@ export const CartItemListDisplay = ({items, fetched})=>(
     {fetched ? <div>
             {items.map(item=>(
                 <CartItemContainer {...item.toJS()} key={item.get(`id`)}/>
-            ))}
+            ))} {console.info("render")}
         </div> :
         <div>
             Please wait...

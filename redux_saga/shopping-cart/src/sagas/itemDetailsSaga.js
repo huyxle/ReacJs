@@ -14,5 +14,8 @@ export function* loadItemDetails(item) {
 
 export function* itemDetailsSaga() {
     const { items } = yield take(SET_CART_ITEMS);
-    yield items.map(item=>fork(loadItemDetails, item));
+    // yield items.map(item=>fork(loadItemDetails, item));
+    for(var i = 0; i< items.length; i++) {
+        yield fork(loadItemDetails, items[i]);
+    }
 }

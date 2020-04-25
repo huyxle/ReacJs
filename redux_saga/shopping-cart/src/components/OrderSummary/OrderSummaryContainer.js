@@ -37,6 +37,9 @@ const mapStateToProps = (state) => {
             }
             return total;
         },0);
+
+        console.info("subtotal: ", subtotal)
+
     }
 
     const totalTax = (subtotal + shippingCost) * taxRate;
