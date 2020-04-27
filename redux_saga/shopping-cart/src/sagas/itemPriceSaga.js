@@ -24,9 +24,5 @@ export function* itemPriceSaga() {
 
     console.info("item price saga")
 
-    //yield items.map(item=>call(fetchItemPrice, item.id, user.country));
-
-    for(var i = 0; i < items.length; i++) {
-        yield call(fetchItemPrice, items[i].id, user.country)
-    }
+    yield all(items.map(item=>call(fetchItemPrice, item.id, user.country)));
 }

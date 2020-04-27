@@ -1,4 +1,4 @@
-import { take, put, fork,call } from 'redux-saga/effects';
+import { take, put, fork,call, all } from 'redux-saga/effects';
 import fetch from 'isomorphic-fetch';
 import {
     SET_CART_ITEMS,
@@ -14,8 +14,5 @@ export function* loadItemDetails(item) {
 
 export function* itemDetailsSaga() {
     const { items } = yield take(SET_CART_ITEMS);
-    // yield items.map(item=>fork(loadItemDetails, item));
-    for(var i = 0; i< items.length; i++) {
-        yield fork(loadItemDetails, items[i]);
-    }
+    yield all(items.map(item => call(loadItemDetails,item)))
 }

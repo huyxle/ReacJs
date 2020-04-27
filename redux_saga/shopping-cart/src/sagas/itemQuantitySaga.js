@@ -33,7 +33,7 @@ export function* handleDecreaseItemQuantity({id, local}) {
     const response = yield call(fetch, `http://localhost:8081/cart/add/${user.get('id')}/${id}`);
 
     if(response.status !== 200) {
-        console.warn("Receivd non-200 status");
+        console.warn("Receive non-200 status");
     }
 
     yield put(setItemQuantityFetchStatus(FETCHED));
