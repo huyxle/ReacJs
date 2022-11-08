@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
+    "babel-loader": "^9.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.23.0",
@@ -38,7 +38,7 @@
     "reselect": "^2.5.4",
     "sandbox": "^0.8.6",
     "socket.io": "^2.0.3",
-    "webpack": "^1.13.3",
+    "webpack": "^5.74.0",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1"
   },
